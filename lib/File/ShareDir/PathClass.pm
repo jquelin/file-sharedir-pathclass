@@ -53,8 +53,8 @@ This module is just a wrapper around L<File::ShareDir> functions,
 transforming their return value to L<Path::Class> objects. This allows
 for easier usage of the value.
 
-Refer to L<File::ShareDir#FUNCTIONS> for a list of which functions are
-supported.
+Refer to L<File::ShareDir> (section FUNCTIONS) for a list of which
+functions are supported.
 
 C<File::ShareDir::PathClass> supports both a procedural and a clas
 methods API.

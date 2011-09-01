@@ -1,8 +1,19 @@
+#
+# This file is part of File-ShareDir-PathClass
+#
+# This software is copyright (c) 2010 by Jerome Quelin.
+#
+# This is free software; you can redistribute it and/or modify it under
+# the same terms as the Perl 5 programming language system itself.
+#
 use 5.010;
 use strict;
 use warnings;
 
 package File::ShareDir::PathClass;
+{
+  $File::ShareDir::PathClass::VERSION = '1.112440';
+}
 # ABSTRACT: File::ShareDir returning Path::Class objects
 
 use File::ShareDir ();
@@ -27,12 +38,17 @@ foreach my $sub ( @File::ShareDir::EXPORT_OK ) {
 }
 
 1;
-__END__
 
-=for Pod::Coverage
-    dist_.*
-    module_.*
-    class_.*
+
+=pod
+
+=head1 NAME
+
+File::ShareDir::PathClass - File::ShareDir returning Path::Class objects
+
+=head1 VERSION
+
+version 1.112440
 
 =head1 SYNOPSIS
 
@@ -46,7 +62,6 @@ __END__
     my $dir = File::ShareDir::PathClass->dist_dir("File-ShareDir-PathClass");
     # $dir is a Path::Class object now
 
-
 =head1 DESCRIPTION
 
 This module is just a wrapper around L<File::ShareDir> functions,
@@ -58,7 +73,6 @@ functions are supported.
 
 C<File::ShareDir::PathClass> supports both a procedural and a clas
 methods API.
-
 
 =head2 Procedural mode
 
@@ -78,7 +92,6 @@ are available either as C<:group> or C<-group>. One can also play any
 trick supported by L<Sub::Exporter>, check its documentation for further
 information.
 
-
 =head2 Class method mode
 
 Otherwise, functions are available as class methods, called as:
@@ -87,11 +100,13 @@ Otherwise, functions are available as class methods, called as:
 
 In this case, one doesn't need to import anything during module use-age.
 
+=for Pod::Coverage dist_.*
+    module_.*
+    class_.*
 
 =head1 SEE ALSO
 
 Find other relevant information in L<File::ShareDir> and L<Path::Class>.
-
 
 You can also look for information on this module at:
 
@@ -114,3 +129,20 @@ L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=File-ShareDir-PathClass>
 L<http://github.com/jquelin/file-sharedir-pathclass.git>.
 
 =back
+
+=head1 AUTHOR
+
+Jerome Quelin
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jerome Quelin.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
+
+__END__
+

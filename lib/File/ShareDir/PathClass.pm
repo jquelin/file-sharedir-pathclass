@@ -30,9 +30,9 @@ foreach my $sub ( @File::ShareDir::EXPORT_OK ) {
 __END__
 
 =for Pod::Coverage
-    ^dist_
-    ^module_
-    ^class_
+    dist_.*
+    module_.*
+    class_.*
 
 =head1 SYNOPSIS
 

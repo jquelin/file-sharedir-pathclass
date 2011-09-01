@@ -1,6 +1,7 @@
 Changelog for File-ShareDir-PathClass
 
 {{$NEXT}}
+ - fix rt#70660 - returning ::Dir when should be returning ::File (IKEGAMI)
 
 1.101620  2010-06-11 14:39:24 Europe/Paris
  - initial release

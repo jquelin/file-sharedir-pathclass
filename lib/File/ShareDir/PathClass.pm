@@ -22,7 +22,7 @@ foreach my $sub ( @File::ShareDir::EXPORT_OK ) {
         # ... that just pass through to file::sharedir method...
         my $result = "File::ShareDir::$sub"->(@_);
         # ... and wrap the result as a path::class object
-        return dir( $result );
+        return $sub =~ /_file\z/ ? file( $result ) : dir( $result );
     };
 }
 
